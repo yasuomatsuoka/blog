@@ -1,0 +1,14 @@
+baseurl = "http://yasuomatsuoka.github.io/blog"
+languageCode = "ja-jp"
+title = "やすおのぶろぐ"
+theme = "gindoro"
+canonifyurls = true # 相対パスではなく baseurl を基点とした絶対パスにする
+
+[params]
+  Description = "ソフトウェア開発的なこととか自転車のこととか食べ物のこと"
+  Author = "Yasuo Matsuoka"
+  GithubUser = "yasuomatsuoka"
+
+[taxonomies]
+  categories = [ "Development" ]
+  tags = [ "Development", "Blogging", "Food", "Bike" ]
