@@ -11,4 +11,7 @@ canonifyurls = true # 相対パスではなく baseurl を基点とした絶対�
 
 [taxonomies]
   categories = [ "Development" ]
-  tags = [ "Development", "Blogging", "Food", "Bike" ]
+  tags = [ "Development", "Bicycle", "Food" ]
+
+[permalinks]
+  post = "/:year/:month/:title/"
