@@ -1,13 +1,18 @@
 baseurl = "http://yasuomatsuoka.github.io/blog/"
-languageCode = "ja-jp"
+languageCode = "ja"
 title = "やすおのぶろぐ"
-theme = "gindoro"
+theme = "angels-ladder"
 canonifyurls = true # 相対パスではなく baseurl を基点とした絶対パスにする
 
 [params]
   Description = "ソフトウェア開発的なこととか自転車のこととか食べ物のこと"
   Author = "Yasuo Matsuoka"
   GithubUser = "yasuomatsuoka"
+  twitter = "https://twitter.com/yasuomatsuoka"
+  github = "https://github.com/yasuomatsuoka"
+  profile = "/images/profile.jpg"
+  copyright = "Written by Yasuo Matsuoka"
+  analytics = "UA-77379841-1"
 
 [taxonomies]
   categories = [ "Development" ]
