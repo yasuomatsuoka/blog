@@ -1,4 +1,4 @@
-baseurl = "http://yasuomatsuoka.github.io/blog"
+baseurl = "http://yasuomatsuoka.github.io/blog/"
 languageCode = "ja-jp"
 title = "やすおのぶろぐ"
 theme = "gindoro"
