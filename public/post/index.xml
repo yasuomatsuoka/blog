@@ -43,7 +43,7 @@ $ hugo new site ./blog
 $ hugo new post/setup_hugo.md
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;テーマ式インストール&#34;&gt;テーマ式インストール&lt;/h2&gt;
+&lt;h2 id=&#34;テーマ一式インストール&#34;&gt;テーマ一式インストール&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code&gt;$ pwd
 /Users/yasuo/blog

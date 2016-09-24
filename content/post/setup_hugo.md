@@ -29,7 +29,7 @@ $ pwd
 $ hugo new post/setup_hugo.md
 ```
 
-## テーマ式インストール
+## テーマ一式インストール
 ```
 $ pwd
 /Users/yasuo/blog
