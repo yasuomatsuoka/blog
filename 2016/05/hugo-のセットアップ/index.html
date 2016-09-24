@@ -69,51 +69,54 @@
     <article>
       
 
-<h1 id="hugo-設定メモ:7c21f512ddbb9f445d5ebc3f639b8b0d">Hugo 設定メモ</h1>
+<h1 id="hugo-設定メモ">Hugo 設定メモ</h1>
 
-<h2 id="参考:7c21f512ddbb9f445d5ebc3f639b8b0d">参考</h2>
+<h2 id="参考">参考</h2>
 
 <p>こちらの手順通り実行
 <a href="http://blog.syati.info/post/create_hugo/">Hugo Part 1 - Hugo で github にブログを立ち上げる</a></p>
 
-<h2 id="hugo-のインストール:7c21f512ddbb9f445d5ebc3f639b8b0d">Hugo のインストール</h2>
+<h2 id="hugo-のインストール">Hugo のインストール</h2>
 
 <pre><code>$ brew install hugo
 </code></pre>
 
-<h2 id="ブログの作成:7c21f512ddbb9f445d5ebc3f639b8b0d">ブログの作成</h2>
+<h2 id="ブログの作成">ブログの作成</h2>
 
 <pre><code>$ pwd
 /Users/yasuo
 $ hugo new site ./blog
 </code></pre>
 
-<h2 id="記事の作成:7c21f512ddbb9f445d5ebc3f639b8b0d">記事の作成</h2>
+<h2 id="記事の作成">記事の作成</h2>
 
 <pre><code>$ pwd
 /Users/yasuo/blog
 $ hugo new post/setup_hugo.md
 </code></pre>
 
-<h2 id="テーマ式インストール:7c21f512ddbb9f445d5ebc3f639b8b0d">テーマ式インストール</h2>
+<h2 id="テーマ式インストール">テーマ式インストール</h2>
 
 <pre><code>$ pwd
 /Users/yasuo/blog
 $ git clone -\-recursive https://github.com/spf13/hugoThemes themes
 </code></pre>
 
-<h2 id="ブログの確認:7c21f512ddbb9f445d5ebc3f639b8b0d">ブログの確認</h2>
+<h2 id="ブログの確認">ブログの確認</h2>
 
 <pre><code>$ hugo server -\-theme=gindoro -\-buildDrafts
 </code></pre>
 
-<h2 id="github-のレポジトリの準備:7c21f512ddbb9f445d5ebc3f639b8b0d">github のレポジトリの準備</h2>
+<h2 id="github-のレポジトリの準備">github のレポジトリの準備</h2>
 
 <p>ブログ用のレポジトリを作成する</p>
 
-<pre><code class="language-http://yasuomatsuoka.gihub.io/blog```">
-## blog の設定ファイルをいじる
-```config.toml
+<pre><code>http://yasuomatsuoka.gihub.io/blog
+</code></pre>
+
+<h2 id="blog-の設定ファイルをいじる">blog の設定ファイルをいじる</h2>
+
+<pre><code>config.toml
 baseurl = &quot;http://yasuomatsuoka.github.io/blog&quot;
 languageCode = &quot;ja-jp&quot;
 title = &quot;やすおのぶろぐ&quot;
@@ -130,7 +133,7 @@ canonifyurls = true # 相対パスではなく baseurl を基点とした絶対�
   tags = [ &quot;Development&quot;, &quot;Blogging&quot;, &quot;Food&quot;, &quot;Bike&quot; ]
 </code></pre>
 
-<h2 id="hugo-をコミットする:7c21f512ddbb9f445d5ebc3f639b8b0d">Hugo をコミットする</h2>
+<h2 id="hugo-をコミットする">Hugo をコミットする</h2>
 
 <pre><code>$ git init
 $ git remote add origin git@github.com:yasuomatsuoka/blog.git
@@ -139,7 +142,7 @@ $ git commit -m 'initial hugo commit.'
 $ git push origin master
 </code></pre>
 
-<h2 id="gh-pages-ブランチを作成する:7c21f512ddbb9f445d5ebc3f639b8b0d">gh-pages ブランチを作成する</h2>
+<h2 id="gh-pages-ブランチを作成する">gh-pages ブランチを作成する</h2>
 
 <p>public ディレクトリのみ管理するブランチを作成</p>
 
@@ -166,7 +169,7 @@ $ git push origin master
 $ git subtree push --prefix=public git@github.com:yasuomatsuoka/blog.git gh-pages
 </code></pre>
 
-<h2 id="デプロイスクリプトを作成:7c21f512ddbb9f445d5ebc3f639b8b0d">デプロイスクリプトを作成</h2>
+<h2 id="デプロイスクリプトを作成">デプロイスクリプトを作成</h2>
 
 <p>blog 以下に作成</p>
 
@@ -209,22 +212,11 @@ git subtree push --prefix=public git@github.com:[username]/yourblog.git gh-pages
     
 
 
-<script type="text/javascript">
-     
-    var disqus_shortname = '';
-
-     
-    (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-
   </main>
   
   <nav class="pagination-single">
+    
+      <span class="previous">&larr; <a href="http://yasuomatsuoka.github.io/blog/1/01/" rel="prev"></a></span>
     
     
   </nav>
