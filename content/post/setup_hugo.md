@@ -43,10 +43,13 @@ $ hugo server -\-theme=gindoro -\-buildDrafts
 
 ## github のレポジトリの準備
 ブログ用のレポジトリを作成する
-```http://yasuomatsuoka.gihub.io/blog```
+```
+http://yasuomatsuoka.gihub.io/blog
+```
 
 ## blog の設定ファイルをいじる
-```config.toml
+```
+config.toml
 baseurl = "http://yasuomatsuoka.github.io/blog"
 languageCode = "ja-jp"
 title = "やすおのぶろぐ"
@@ -131,4 +134,3 @@ chmod +x deploy.sh
 ```
 ./deploy.sh
 ```
-
