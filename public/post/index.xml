@@ -17,51 +17,54 @@
       <guid>http://yasuomatsuoka.github.io/blog/2016/05/hugo-%E3%81%AE%E3%82%BB%E3%83%83%E3%83%88%E3%82%A2%E3%83%83%E3%83%97/</guid>
       <description>
 
-&lt;h1 id=&#34;hugo-設定メモ:7c21f512ddbb9f445d5ebc3f639b8b0d&#34;&gt;Hugo 設定メモ&lt;/h1&gt;
+&lt;h1 id=&#34;hugo-設定メモ&#34;&gt;Hugo 設定メモ&lt;/h1&gt;
 
-&lt;h2 id=&#34;参考:7c21f512ddbb9f445d5ebc3f639b8b0d&#34;&gt;参考&lt;/h2&gt;
+&lt;h2 id=&#34;参考&#34;&gt;参考&lt;/h2&gt;
 
 &lt;p&gt;こちらの手順通り実行
 &lt;a href=&#34;http://blog.syati.info/post/create_hugo/&#34;&gt;Hugo Part 1 - Hugo で github にブログを立ち上げる&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;hugo-のインストール:7c21f512ddbb9f445d5ebc3f639b8b0d&#34;&gt;Hugo のインストール&lt;/h2&gt;
+&lt;h2 id=&#34;hugo-のインストール&#34;&gt;Hugo のインストール&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code&gt;$ brew install hugo
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;ブログの作成:7c21f512ddbb9f445d5ebc3f639b8b0d&#34;&gt;ブログの作成&lt;/h2&gt;
+&lt;h2 id=&#34;ブログの作成&#34;&gt;ブログの作成&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code&gt;$ pwd
 /Users/yasuo
 $ hugo new site ./blog
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;記事の作成:7c21f512ddbb9f445d5ebc3f639b8b0d&#34;&gt;記事の作成&lt;/h2&gt;
+&lt;h2 id=&#34;記事の作成&#34;&gt;記事の作成&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code&gt;$ pwd
 /Users/yasuo/blog
 $ hugo new post/setup_hugo.md
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;テーマ式インストール:7c21f512ddbb9f445d5ebc3f639b8b0d&#34;&gt;テーマ式インストール&lt;/h2&gt;
+&lt;h2 id=&#34;テーマ式インストール&#34;&gt;テーマ式インストール&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code&gt;$ pwd
 /Users/yasuo/blog
 $ git clone -\-recursive https://github.com/spf13/hugoThemes themes
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;ブログの確認:7c21f512ddbb9f445d5ebc3f639b8b0d&#34;&gt;ブログの確認&lt;/h2&gt;
+&lt;h2 id=&#34;ブログの確認&#34;&gt;ブログの確認&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code&gt;$ hugo server -\-theme=gindoro -\-buildDrafts
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;github-のレポジトリの準備:7c21f512ddbb9f445d5ebc3f639b8b0d&#34;&gt;github のレポジトリの準備&lt;/h2&gt;
+&lt;h2 id=&#34;github-のレポジトリの準備&#34;&gt;github のレポジトリの準備&lt;/h2&gt;
 
 &lt;p&gt;ブログ用のレポジトリを作成する&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-http://yasuomatsuoka.gihub.io/blog```&#34;&gt;
-## blog の設定ファイルをいじる
-```config.toml
+&lt;pre&gt;&lt;code&gt;http://yasuomatsuoka.gihub.io/blog
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;blog-の設定ファイルをいじる&#34;&gt;blog の設定ファイルをいじる&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;config.toml
 baseurl = &amp;quot;http://yasuomatsuoka.github.io/blog&amp;quot;
 languageCode = &amp;quot;ja-jp&amp;quot;
 title = &amp;quot;やすおのぶろぐ&amp;quot;
@@ -78,7 +81,7 @@ canonifyurls = true # 相対パスではなく baseurl を基点とした絶対�
   tags = [ &amp;quot;Development&amp;quot;, &amp;quot;Blogging&amp;quot;, &amp;quot;Food&amp;quot;, &amp;quot;Bike&amp;quot; ]
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;hugo-をコミットする:7c21f512ddbb9f445d5ebc3f639b8b0d&#34;&gt;Hugo をコミットする&lt;/h2&gt;
+&lt;h2 id=&#34;hugo-をコミットする&#34;&gt;Hugo をコミットする&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code&gt;$ git init
 $ git remote add origin git@github.com:yasuomatsuoka/blog.git
@@ -87,7 +90,7 @@ $ git commit -m &#39;initial hugo commit.&#39;
 $ git push origin master
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;gh-pages-ブランチを作成する:7c21f512ddbb9f445d5ebc3f639b8b0d&#34;&gt;gh-pages ブランチを作成する&lt;/h2&gt;
+&lt;h2 id=&#34;gh-pages-ブランチを作成する&#34;&gt;gh-pages ブランチを作成する&lt;/h2&gt;
 
 &lt;p&gt;public ディレクトリのみ管理するブランチを作成&lt;/p&gt;
 
@@ -114,7 +117,7 @@ $ git push origin master
 $ git subtree push --prefix=public git@github.com:yasuomatsuoka/blog.git gh-pages
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;デプロイスクリプトを作成:7c21f512ddbb9f445d5ebc3f639b8b0d&#34;&gt;デプロイスクリプトを作成&lt;/h2&gt;
+&lt;h2 id=&#34;デプロイスクリプトを作成&#34;&gt;デプロイスクリプトを作成&lt;/h2&gt;
 
 &lt;p&gt;blog 以下に作成&lt;/p&gt;
 
@@ -150,6 +153,15 @@ git subtree push --prefix=public git@github.com:[username]/yourblog.git gh-pages
 &lt;pre&gt;&lt;code&gt;./deploy.sh
 &lt;/code&gt;&lt;/pre&gt;
 </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://yasuomatsuoka.github.io/blog/1/01/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://yasuomatsuoka.github.io/blog/1/01/</guid>
+      <description></description>
     </item>
     
   </channel>
