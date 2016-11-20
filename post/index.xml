@@ -7,8 +7,101 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>Yasuo Matsuoka</copyright>
-    <lastBuildDate>Sun, 01 May 2016 14:57:29 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 19 Nov 2016 14:02:21 +0900</lastBuildDate>
     <atom:link href="http://yasuomatsuoka.github.io/blog/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>GO 環境のセットアップ</title>
+      <link>http://yasuomatsuoka.github.io/blog/2016/11/go-%E7%92%B0%E5%A2%83%E3%81%AE%E3%82%BB%E3%83%83%E3%83%88%E3%82%A2%E3%83%83%E3%83%97/</link>
+      <pubDate>Sat, 19 Nov 2016 14:02:21 +0900</pubDate>
+      
+      <guid>http://yasuomatsuoka.github.io/blog/2016/11/go-%E7%92%B0%E5%A2%83%E3%81%AE%E3%82%BB%E3%83%83%E3%83%88%E3%82%A2%E3%83%83%E3%83%97/</guid>
+      <description>
+
+&lt;h1 id=&#34;参考&#34;&gt;参考&lt;/h1&gt;
+
+&lt;p&gt;こちらの手順通り実行
+&lt;a href=&#34;http://blog.flup.jp/2016/02/16/dev_golang_keeping_vendoring/&#34;&gt;MacにGo言語の開発環境を構築する【準備編】&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;go-のインストール&#34;&gt;Go のインストール&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;$ brew install go
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&#34;gopath環境変数の設定&#34;&gt;GOPATH環境変数の設定&lt;/h1&gt;
+
+&lt;p&gt;.zshrc に追加&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;export GOPATH=$HOME
+export PATH=$PATH:$GOPATH/bin
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&#34;プロジェクト毎-に-gopath-を使い分けるために-direnv-を使う&#34;&gt;プロジェクト毎 に GOPATH を使い分けるために direnv を使う&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;インストール&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# direnv
+$ brew install direnv
+$ echo &#39;eval &amp;quot;$(direnv hook zsh)&amp;quot;&#39; &amp;gt;&amp;gt; ~/.zsh/mac
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;設定例&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;dotfiles|master ⇒ pwd
+/Users/yasuo/src/github.com/yasuomatsuoka/dotfiles
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;code&gt;direnv edit .&lt;/code&gt; をするとエディタが立ち上がるので&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;export GOPATH=$(pwd):$GOPATH
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;を入れて保存。&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;vendoring-設定を有効にし-glide-を使う&#34;&gt;vendoring 設定を有効にし、glide を使う&lt;/h1&gt;
+
+&lt;p&gt;依存ライブラリをリポジトリ内の vender ディレクトリに取り込み自分のコードと分けることができる&lt;/p&gt;
+
+&lt;h3 id=&#34;direnv-の設定ファイルに環境変数を追加&#34;&gt;direnv の設定ファイルに環境変数を追加&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;export GO15VENDOREXPERIMENT=1
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;これで、 go が vender 以下を意識してくれるようになる&lt;/p&gt;
+
+&lt;h2 id=&#34;glide&#34;&gt;glide&lt;/h2&gt;
+
+&lt;p&gt;vendoring オプションを有効にしただけでは、&lt;code&gt;go get&lt;/code&gt; すると $GOPATH/src 以下に取り込まれてしまう。
+プロジェクト内に glide の YAML を書くことによって、vender 以下に外部のライブラリを取り込むことができる。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;glide のインストール&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ brew install glide
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;YAML の作成&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# プロジェクトのディレクトリで
+$ glide create
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;package の追加&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ glide get github.com/Masterminds/cookoo
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;package のインストール&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ glide up
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;.gitignore に vender を追加&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>Hugo のセットアップ</title>
