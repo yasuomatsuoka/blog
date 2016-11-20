@@ -1,22 +1,27 @@
 baseurl = "http://yasuomatsuoka.github.io/blog/"
 languageCode = "ja"
 title = "やすおのぶろぐ"
-theme = "angels-ladder"
+theme = "ghostwriter"
 canonifyurls = true # 相対パスではなく baseurl を基点とした絶対パスにする
+googleAnalytics = "UA-77379841-1"
+copyright = "Yasuo Matsuoka"
+
+[Author]
+  name = "Yasuo Matsuoka"
 
 [params]
-  Description = "ソフトウェア開発的なこととか自転車のこととか食べ物のこと"
-  Author = "Yasuo Matsuoka"
-  GithubUser = "yasuomatsuoka"
+  intro = true
+  headline = "やすおのぶろぐ"
+  description = "ソフトウェア開発の備忘録や自転車や食べ物のこと"
   twitter = "https://twitter.com/yasuomatsuoka"
   github = "https://github.com/yasuomatsuoka"
+  linkedin = "https://linkedin.com/in/XXX/"
   profile = "/images/profile.jpg"
-  copyright = "Written by Yasuo Matsuoka"
-  analytics = "UA-77379841-1"
+  opengraph = true
 
 [taxonomies]
-  categories = [ "Development" ]
-  tags = [ "Development", "Bicycle", "Food" ]
+  tag = "tags"
+  category = "categories"
 
 [permalinks]
   post = "/:year/:month/:title/"
