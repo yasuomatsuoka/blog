@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Post-rsses on やすおのぶろぐ</title>
-    <link>http://yasuomatsuoka.github.io/blog/post/index.xml</link>
-    <description>Recent content in Post-rsses on やすおのぶろぐ</description>
+    <title>やすおのぶろぐ</title>
+    <link>http://yasuomatsuoka.github.io/blog/categories/develop/index.xml</link>
+    <description>Recent content on やすおのぶろぐ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>Yasuo Matsuoka</copyright>
-    <lastBuildDate>Sun, 01 May 2016 14:57:29 +0900</lastBuildDate>
-    <atom:link href="http://yasuomatsuoka.github.io/blog/post/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://yasuomatsuoka.github.io/blog/categories/develop/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Hugo のセットアップ</title>
