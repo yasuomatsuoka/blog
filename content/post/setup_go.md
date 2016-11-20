@@ -1,6 +1,5 @@
 +++
 title = "GO 環境のセットアップ"
-draft = true
 date = "2016-11-19T14:02:21+09:00"
 categories = [ "develop" ]
 tags = [ "go", "environment" ]
